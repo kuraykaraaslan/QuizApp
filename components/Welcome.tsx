@@ -9,6 +9,16 @@ const Welcome = ( {  playerName , setPlayerName , nextQuestion } : { playerName:
             alert('Please enter your name');
             return;
         }
+        if (playerName.length < 3) {
+            alert('Please enter a valid name');
+            return;
+        }
+
+        if (playerName.length > 20) {
+            alert('Please enter a shorter name');
+            return;
+        }
+        
         nextQuestion();
     }
 
