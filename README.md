@@ -6,7 +6,7 @@ This is a simple quiz app that allows users to take a quiz and see their score a
 
 ## Live Demo
 
-[Quiz App](https://quiz-c2kcgk3mt-kuraydev.vercel.app)
+[Quiz App](https://quiz-app-kuraydev.vercel.app/)
 
 ## Features
 
