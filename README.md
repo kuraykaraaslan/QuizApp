@@ -4,6 +4,10 @@
 
 This is a simple quiz app that allows users to take a quiz and see their score at the end. The app is built using React, TypeScript.
 
+## Live Demo
+
+[Quiz App](https://quiz-c2kcgk3mt-kuraydev.vercel.app)
+
 ## Features
 
 - Loads questions from an javascript object.
