@@ -22,6 +22,7 @@ const SingleQuestion = ({ question, options, answer, media , nextQuestion , give
         //setSelected(option);
         //setIsAnswered(true);
         giveAnswer(index, option);
+        setLeftTime(30);
         nextQuestion();
     }
 
@@ -46,12 +47,12 @@ const SingleQuestion = ({ question, options, answer, media , nextQuestion , give
 
     return (
         <div className="relative flex flex-col items-center">
-            <div className="absolute -top-24 w-20 h-20 bg-white rounded-full flex items-center justify-center text-black font-bold shadow-xl">
+            <div className={"absolute -top-24 w-20 h-20 bg-white rounded-full flex items-center justify-center text-black font-bold shadow-xl bg-green-200 " + (leftTime > 5 ? leftTime > 10 ? leftTime > 15 ? "" : "animate-pulse" : "animate-pulse animate-bounce" : "animate-pulse animate-bounce animate-spin")}>
                 <p>{leftTime}</p>
             </div>
             <img src={`/assets/img/${media}`} alt={question} className="w-32 h-32 object-cover" />
             <h2 className="text-black text-2xl font-bold my-4">{question}</h2>
-            <div className="text-back grid grid-cols-2 gap-4">
+            <div className={"text-back grid grid-cols-2 gap-4 duration-300" + (leftTime > 20 ? " opacity-0" : " opacity-100")}>
                 {options.map((option, index) => (
                     <button
                         key={index}

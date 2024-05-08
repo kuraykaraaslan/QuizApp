@@ -23,7 +23,7 @@ const Welcome = ( {  playerName , setPlayerName , nextQuestion } : { playerName:
                 onChange={(e) => setPlayerName(e.target.value)}
                 className="border border-gray-300 p-2 rounded-md mb-4 text-black"
             />
-            <button
+            <button id='start'
                 onClick={handleNext}
                 className="bg-green-300 text-white p-2 rounded-md"
             >
