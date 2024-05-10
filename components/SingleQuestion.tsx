@@ -58,7 +58,7 @@ const SingleQuestion = ({ question, options, answer, media , nextQuestion , give
                         key={index}
                         className={"p-4 rounded-lg" + (isAnswered ? (option === answer ? " text-white bg-green-500" : " text-white bg-red-500") : " text-white bg-gray-500")}
                         onClick={() => handleAnswer(option)}
-                        disabled={isAnswered}
+                        disabled={isAnswered || leftTime > 20}
                     >
                         {option}
                     </button>
