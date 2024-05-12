@@ -28,6 +28,7 @@ function Home() {
   const nextQuestion = () => {
     if (gameState === 'welcome') {
       setGameState('playing');
+      return;
     }
 
     if (questionIndex === questions.length - 1) {
